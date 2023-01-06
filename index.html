@@ -12,7 +12,7 @@
     <div class="container d-md-flex flex-md-column">
         <!-- Quoted Price -->
         <div class="row">
-            <div class="col-md-6 mx-auto">
+            <div class="col-md-4 mx-auto">
                 <div class="input-group mb-3 mt-3">
                     <span class="input-group-text title">Quoted Price</span>
                     <span class="input-group-text">₱</span>
@@ -22,7 +22,7 @@
         </div>
         <!-- Total Cost of Equipment -->
         <div class="row">
-            <div class="col-md-6 mx-auto">
+            <div class="col-md-4 mx-auto">
                 <div class="input-group mb-3">
                     <span class="input-group-text title">Total Cost of Equipment</span>
                     <span class="input-group-text">₱</span>
@@ -32,7 +32,7 @@
         </div>
         <!-- Labor -->
         <div class="row">
-            <div class="col-md-6 mx-auto">
+            <div class="col-md-4 mx-auto">
                 <div class="input-group mb-3">
                     <span class="input-group-text title">Labor</span>
                     <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" id="labor" min="1" max="100" value="0">
@@ -42,7 +42,7 @@
         </div>
         <!-- Overhead -->
         <div class="row">
-            <div class="col-md-6 mx-auto">
+            <div class="col-md-4 mx-auto">
                 <div class="input-group mb-3">
                     <span class="input-group-text title">Overhead</span>
                     <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" id="overhead-expenses" min="1" max="100" value="0">
@@ -52,7 +52,7 @@
         </div>
         <!-- SOP -->
         <div class="row">
-            <div class="col-md-6 mx-auto">
+            <div class="col-md-4 mx-auto">
                 <div class="input-group mb-3">
                     <span class="input-group-text title">Procuring Entity Incentive</span>
                     <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" id="p-incentive"
@@ -63,7 +63,7 @@
         </div>
         <!-- Supplier's Royalty -->
         <div class="row">
-            <div class="col-md-6 mx-auto">
+            <div class="col-md-4 mx-auto">
                 <div class="input-group mb-3">
                     <span class="input-group-text title">Supplier's Royalty</span>
                     <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" id="s-royalty"
@@ -75,74 +75,81 @@
     </div>
 
     <hr>
-    <div class="d-flex">
-        <button type="button" class="btn btn-danger" onclick="reset()">Reset Fields</button>
-        <button type="button" class="btn btn-primary" onclick="calc()">Calculate</button>
-
+    <div class="container mb-3">
+        <div class="row">
+            <div class="col-md-4 mx-auto">
+                <div class="d-flex">
+                    <button type="button" class="btn btn-danger" onclick="reset()">Reset Fields</button>
+                    <button type="button" class="btn btn-primary" onclick="calc()">Calculate</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 
-    <div class="container table-responsive">
+    <div class="container">
         <div class="row">
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Details</th>
-                    <th scope="col">Amount</th>
-                  </tr>
-                </thead>
-                <tbody class="table-group-divider">
-                 <tr>
-                    <td>Quoted Price</td>
-                    <td id="quoted-price-text"></td>
-                 </tr>
-                 <tr>
-                    <td>Net Amount Due (2.0% Tax)</td>
-                    <td id="net-amount-text"></td>
-                 </tr>
-                 <tr>
-                    <td>Total Cost of Equipment/ <br> Materials</td>
-                    <td id="total-cost-text"></td>
-                 </tr>
-                 <td></td>
-                 <tr>
-                    <th class="text-center table-info table-group-divider" colspan="2">Expenses</th>
-                  </tr>
-                  <tr>
-                    <td>Labor</td>
-                    <td id="labor-text"></td>
-                  </tr>
-                  <tr>
-                    <td>Overhead Expenses</td>
-                    <td id="overhead-text"></td>
-                  </tr>
-                  <tr>
-                    <td class=" table-primary">Subtotal</td>
-                    <td class="table-primary" id="subtotal1-text"></td>
-                  </tr>
-                  <td class="table-light" colspan="2"></td>
-                  <tr>
-                    <td>Procuring Entity Incentive</td>
-                    <td id="incentive-text"></td>
-                  </tr>
-                  <tr>
-                    <td>Supplier's Royalties</td>
-                    <td id="royalties-text"></td>
-                  </tr>
-                  <tr>
-                    <td class="table-danger">Subtotal</td>
-                    <td class=" table-danger" id="subtotal2-text"></td>
-                  </tr> 
-                  <td class="table-light" colspan="2"></td>
-                  <tr>
-                    <th class="text-center table-warning table-group-divider" colspan="2">Profit</th>
-                  </tr>
-                  <tr>
-                    <td class="table-success table-group-divider">Actual Net Profit</td>
-                    <td id="profit-text" class="table-success table-group-divider"></td>
-                  </tr>
-                </tbody>
-            </table>
+            <div class="col-md-4 mx-auto">
+                <table class="table">
+                    <thead>
+                      <tr class="table-primary">
+                        <th scope="col">Details</th>
+                        <th scope="col">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                     <tr class="table-secondary">
+                        <td>Quoted Price</td>
+                        <td id="quoted-price-text"></td>
+                     </tr>
+                     <tr class="table-secondary">
+                        <td>Net Amount Due (2.0% Tax)</td>
+                        <td id="net-amount-text"></td>
+                     </tr>
+                     <tr class="table-secondary">
+                        <td>Total Cost of Equipment/ <br> Materials</td>
+                        <td id="total-cost-text"></td>
+                     </tr>
+                     <td></td>
+                     <tr>
+                        <th class="text-center table-info table-group-divider" colspan="2">Expenses</th>
+                      </tr>
+                      <tr class="table-secondary">
+                        <td>Labor</td>
+                        <td id="labor-text"></td>
+                      </tr>
+                      <tr class="table-secondary">
+                        <td>Overhead Expenses</td>
+                        <td id="overhead-text"></td>
+                      </tr>
+                      <tr>
+                        <td class=" table-primary">Subtotal</td>
+                        <td class="table-primary" id="subtotal1-text"></td>
+                      </tr>
+                      <td colspan="2"></td>
+                      <tr class="table-secondary">
+                        <td>Procuring Entity Incentive</td>
+                        <td id="incentive-text"></td>
+                      </tr>
+                      <tr class="table-secondary">
+                        <td>Supplier's Royalties</td>
+                        <td id="royalties-text"></td>
+                      </tr>
+                      <tr>
+                        <td class="table-danger">Subtotal</td>
+                        <td class=" table-danger" id="subtotal2-text"></td>
+                      </tr> 
+                      <td class="table-light" colspan="2"></td>
+                      <tr>
+                        <th class="text-center table-warning table-group-divider" colspan="2">Profit</th>
+                      </tr>
+                      <tr>
+                        <td class="table-success table-group-divider">Actual Net Profit</td>
+                        <td id="profit-text" class="table-success table-group-divider"></td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     
